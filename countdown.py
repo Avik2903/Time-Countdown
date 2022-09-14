@@ -1,35 +1,28 @@
 import time
-from tkinter import *
+from tkinter import * 
 from tkinter import messagebox
 
 root = Tk()
 root.geometry("300x250")
-root.title("Time Count Down")
+root.title("timer")
 
-hour=StringVar()
-minute=StringVar()
-second=StringVar()
-
+hour = StringVar()
+min = StringVar()
+sec = StringVar()
 hour.set("00")
-minute.set("00")
-second.set("00")
+min.set("00")
+sec.set("00")
 
-hourEntry= Entry(root, width=3, font=("Arial",18,""),
-				textvariable=hour)
-hourEntry.place(x=80,y=20)
-
-minuteEntry= Entry(root, width=3, font=("Arial",18,""),
-				textvariable=minute)
-minuteEntry.place(x=130,y=20)
-
-secondEntry= Entry(root, width=3, font=("Arial",18,""),
-				textvariable=second)
-secondEntry.place(x=180,y=20)
-
+hEntry = Entry(root, width=3, font=("Arial",18,""),textvariable=hour)
+hEntry.place(x=80,y=20)
+mEntry = Entry(root, width=3, font=("Arial",18,""),textvariable=min)
+mEntry.place(x=130,y=20)
+sEntry = Entry(root, width=3, font=("Arial",18,""),textvariable=sec)
+sEntry.place(x=180,y=20)
 
 def submit():
 	try:
-		temp = int(hour.get())*3600 + int(minute.get())*60 + int(second.get())
+		temp = int(hour.get())*3600 + int(min.get())*60 + int(sec.get())
 	except:
 		print("Please input the right value")
 	while temp >-1:
@@ -45,7 +38,7 @@ def submit():
 		if (temp == 0):
 			messagebox.showinfo("Time Countdown", "Time's up ")
 		temp -= 1
-btn = Button(root, text='Set Time Countdown', bd='5',
-			command= submit)
+btn = Button(root, text='Set Time Countdown', bd='5',command= submit)
 btn.place(x = 70,y = 120)
 root.mainloop()
+
