@@ -31,8 +31,8 @@ def submit():
 		if mins >60:
 			hours, mins = divmod(mins, 60)
 		hour.set("{0:2d}".format(hours))
-		minute.set("{0:2d}".format(mins))
-		second.set("{0:2d}".format(secs))
+		min.set("{0:2d}".format(mins))
+		sec.set("{0:2d}".format(secs))
 		root.update()
 		time.sleep(1)
 		if (temp == 0):
@@ -41,4 +41,3 @@ def submit():
 btn = Button(root, text='Set Time Countdown', bd='5',command= submit)
 btn.place(x = 70,y = 120)
 root.mainloop()
-
