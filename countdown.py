@@ -38,6 +38,7 @@ def submit():
 		if (temp == 0):
 			messagebox.showinfo("Time Countdown", "Time's up ")
 		temp -= 1
+		
 btn = Button(root, text='Set Time Countdown', bd='5',command= submit)
 btn.place(x = 70,y = 120)
 root.mainloop()
