@@ -19,7 +19,6 @@ mEntry = Entry(root, width=3, font=("Arial",18,""),textvariable=min)
 mEntry.place(x=130,y=20)
 sEntry = Entry(root, width=3, font=("Arial",18,""),textvariable=sec)
 sEntry.place(x=180,y=20)
-
 def submit():
 	try:
 		temp = int(hour.get())*3600 + int(min.get())*60 + int(sec.get())
